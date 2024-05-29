@@ -15,24 +15,20 @@ Verifique que en consola no figura ningún error en alguna de ellas
 console.log("Declaración de eventos");
 const boton = document.querySelector("button");
 
-boton.addEventListener("click", function() {
-    boton.className = "btnClick";
-});
+boton.addEventListener("click", () => boton.className = "btnClick");
 
-boton.addEventListener("mouseout", function() {
-    boton.className = "btnOut";
-});
+boton.addEventListener("mouseout", () => boton.className = "btnOut");
 
 console.log("Declaración de función una función común");
-function nombreCompleto(nombre, apellido) {
+const nombreCompleto = (nombre, apellido) => {
     const completo = nombre + "_" + apellido;
     return completo;
- }
+}
 
 console.log(nombreCompleto("Max", "Power"));
 
 console.log("Declaración de función anónima");
-const iniciales = function (nombre, apellido) {
+const iniciales = (nombre, apellido) => {
     return nombre[0].toUpperCase() + "_" + apellido[0].toUpperCase();
 }
 
@@ -49,3 +45,11 @@ sino que debe utilizarse como variable global.
 */
 
 const colores = ["azul", "verde", "amarillo", "rojo"];
+
+const recorreColores = () => {
+    for(const color of colores) {
+        console.log(color);
+    }
+}
+
+recorreColores();
