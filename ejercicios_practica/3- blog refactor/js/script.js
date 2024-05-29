@@ -1,22 +1,19 @@
 "use strict";
 
 /* Tarea
- * Objetivos: adquirir herramientas y poner
- * en práctica lo visto en clase
- */
+* Objetivos: adquirir herramientas y poner
+* en práctica lo visto en clase
+*/
 
 /* Enunciado
-
 Deberá tomar esta versión de la aplicación de blog
 vista en la última clase y refactorizar:
 * Dividir la app en archivos (app.js, events.js, etc).
 * Usar funciones flecha en los eventos.
 * Crear un prototipo "Post" que represente la estructura de 
-  datos de un post e implemente la función "render" 
-  (tal cual lo realizado con el prototipo Pokemons).
-
- */
-
+datos de un post e implemente la función "render" 
+(tal cual lo realizado con el prototipo Pokemons).
+*/
 
 // Apuntamos a nuestro titulo y lo guardamos en una constante
 const tituloPrincipal = document.querySelector(".main-title");
@@ -28,9 +25,7 @@ console.log(tituloPrincipal.textContent);
 const hoy = new Date();
 
 // Alteramos el texto de nuestro titulo con un "template string"
-tituloPrincipal.textContent = `Publica tu aprendizaje: ${hoy.getDate()}/${
-  hoy.getMonth() + 1
-}/${hoy.getFullYear()}`;
+tituloPrincipal.textContent = `Publica tu aprendizaje: ${hoy.getDate()}/${hoy.getMonth()+1}/${hoy.getFullYear()}`;
 
 // ----------------------------------------------------
 // Generar contenido dinamicamente con bucles y objetos
@@ -39,7 +34,7 @@ const data = [
   {
     titulo: "Einstein y su intelecto",
     avatar: "./images/avatar1.png",
-    texto: `Gracias a su biógrafo, somos capaces de saber que Einstein tan
+    texto: `Gracias a su biógrafo, somos capaces de saber que       Einstein tan
             solo a la edad de 16 años, ya tenía una temprana concepción del
             funcionamiento de la gravedad, acercándose a la idea de que la
             gravedad y la aceleración se comportaban de maneras similares.
