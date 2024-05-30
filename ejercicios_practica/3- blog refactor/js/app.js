@@ -16,7 +16,7 @@ const hoy = new Date();
 tituloPrincipal.textContent = `Publica tu aprendizaje: ${hoy.getDate()}/${hoy.getMonth()+1}/${hoy.getFullYear()}`;
 
 let accumulator = ""
-for(const post of data){
+for(const post of listaPosts){
   accumulator += post.render();
 };
 
